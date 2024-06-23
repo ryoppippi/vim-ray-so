@@ -1,5 +1,5 @@
 import * as ufo from "npm:ufo@1.5.3";
-import * as uint from "npm:uint8array-extras@1.1.0";
+import { encodeURI } from "npm:js-base64@3.7.7";
 import { uncapitalize } from "jsr:@ryoppippi/str-fns@0.0.15";
 
 import type { Options } from "./types.ts";
@@ -7,7 +7,7 @@ import type { Options } from "./types.ts";
 const BASE_URL = `https://ray.so`;
 
 export function getRaySoUrl(options: Options) {
-  const base64Code = uint.stringToBase64(options.code ?? "");
+  const base64Code = encodeURI(options.code ?? "");
   const hash = encodeHashItems(
     {
       ...options,
