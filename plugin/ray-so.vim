@@ -18,4 +18,4 @@ function! s:command(args, range, range_given) abort
   call denops#plugin#wait_async('ray-so', l:Callback)
 endfunction
 
-command! -bar -range=0  RaySo call s:command([<f-args>], [<line1>, <line2>], <count>)
+command! -bar -range=0 -nargs=* RaySo call s:command([<f-args>], [<line1>, <line2>], <count>)

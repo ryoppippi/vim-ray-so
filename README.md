@@ -37,6 +37,7 @@ Use the `:RaySo` command to generate a code image:
 
 - Without a visual selection: `:RaySo` will use the entire buffer
 - With a visual selection: Select the desired code and use `:RaySo`
+- Custom title: `:RaySo my_custom_title`
 
 The generated image URL will automatically open in your default browser.
 

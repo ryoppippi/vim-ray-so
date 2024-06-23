@@ -13,28 +13,28 @@ export function main(denops: Denops) {
   denops.dispatcher = {
     async open(args, range) {
       U.assert(args, U.isArrayOf(U.isString), { name: "args" });
-      U.assert(range, U.isOneOf([U.isUndefined, isRange]), { name: "range" });
-      console.log({ args, range });
+      U.assert(range, U.isUnionOf([U.isUndefined, isRange]), { name: "range" });
 
       /** get selected text. if range is undefined, get all text */
-      const code =
-        (range
-          ? (await denops.call("getline", range[0], range[1])) as string[]
-          : args).join("\n");
-      U.assert(code, U.isString);
+      const codeArray = range === undefined
+        ? await denops.call("getline", 1, "$")
+        : await denops.call("getline", range[0], range[1]);
+      U.assert(codeArray, U.isArrayOf(U.isString));
+      const code = codeArray.join("\n");
+
+      const path = args.at(0) ?? await denops.eval("expand('%:t')");
 
       const theme = await g.get(denops, "ray_so_theme");
       const padding = await g.get(denops, "ray_so_padding");
       const background = await g.get(denops, "ray_so_background");
       const darkmode = await g.get(denops, "ray_so_darkmode");
 
-      const currentPath = await denops.eval("expand('%:t')");
       const filetype = await denops.eval("&filetype");
 
       const options = U.ensure(
         {
           code,
-          title: currentPath,
+          title: path,
           theme,
           padding,
           background,
