@@ -43,7 +43,6 @@ export function main(denops: Denops) {
         } as const,
         isOptions,
       );
-      U.assert(options, isOptions);
 
       const url = getRaySoUrl({ ...options, code });
       await systemopen(url);
