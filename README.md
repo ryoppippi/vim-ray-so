@@ -1,6 +1,9 @@
-# Ray.so Image Generator for Vim/Neovim
+# ray-so.vim
 
 This plugin allows you to easily generate beautiful code images using the [Ray.so](https://ray.so) service directly from your Vim or Neovim editor.
+
+![screen](./docs/screen.avif)
+
 
 ## Features
 
