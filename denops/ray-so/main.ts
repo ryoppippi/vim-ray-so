@@ -5,7 +5,7 @@ import { systemopen } from "jsr:@lambdalisue/systemopen@1.0.0";
 import * as U from "jsr:@core/unknownutil@3.18.1";
 
 import { isOptions } from "./types.ts";
-import { getRaySoUrl } from "./ray.so.ts";
+import { getRaySoUrl } from "./ray-so.ts";
 
 const isRange = U.isTupleOf([U.isNumber, U.isNumber] as const);
 
