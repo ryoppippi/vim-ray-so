@@ -73,6 +73,15 @@ you can see the available options at [`types.ts`](./denops/ray-so/types.ts)
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Related Projects
+- [rayso.nvim](https://github.com/TobinPalmer/rayso.nvim)
+- [carbon-now.nvim](https://github.com/ellisonleao/carbon-now.nvim)
+- [vim-carbon-now-sh](https://github.com/kristijanhusak/vim-carbon-now-sh)
+- [denops-silicon.vim](https://github.com/skanehira/denops-silicon.vim)
+- [sillicon.nvim](https://github.com/krivahtoo/silicon.nvim)
+- [vim-sillicon](https://github.com/segeljakt/vim-silicon)
+- [freeze.nvim](https://github.com/ethanholz/freeze.nvim)
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
