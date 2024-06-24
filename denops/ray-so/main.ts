@@ -1,6 +1,7 @@
 import { Denops } from "https://deno.land/x/denops_std@v6.5.0/mod.ts";
 import { g } from "https://deno.land/x/denops_std@v6.5.0/variable/variable.ts";
 import * as helper from "https://deno.land/x/denops_std@v6.5.0/helper/mod.ts";
+import * as fn from "https://deno.land/x/denops_std@v6.5.0/function/mod.ts";
 
 import { systemopen } from "jsr:@lambdalisue/systemopen@1.0.0";
 import * as U from "jsr:@core/unknownutil@3.18.1";
@@ -26,7 +27,7 @@ export function main(denops: Denops) {
         U.assert(codeArray, U.isArrayOf(U.isString));
         const code = codeArray.join("\n");
 
-        const path = args.at(0) ?? await denops.eval("expand('%:t')");
+        const path = args.at(0) ?? await fn.expand(denops, "%:t");
 
         const theme = await g.get(denops, "ray_so_theme");
         const padding = await g.get(denops, "ray_so_padding");
