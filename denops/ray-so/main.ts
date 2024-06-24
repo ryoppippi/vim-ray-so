@@ -35,20 +35,19 @@ export function main(denops: Denops) {
 
         const filetype = await denops.eval("&filetype");
 
-        const options = U.ensure(
-          {
-            code,
-            title: path,
-            theme,
-            padding,
-            background,
-            darkmode,
-            language: filetype,
-          } as const,
-          isOptions,
-        );
+        const options = {
+          language: filetype,
+          title: path,
+          code,
+          theme,
+          padding,
+          background,
+          darkmode,
+        };
 
-        const url = getRaySoUrl({ ...options, code });
+        U.assert(options, isOptions);
+
+        const url = getRaySoUrl(options);
         await systemopen(url);
       }),
   };
