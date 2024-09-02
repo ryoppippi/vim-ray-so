@@ -1,4 +1,4 @@
-# ray-so.vim
+# vim-ray-so
 
 This plugin allows you to easily generate beautiful code images using the [Ray.so](https://ray.so) service directly from your Vim or Neovim editor.
 
@@ -18,13 +18,13 @@ Using your preferred plugin manager, add the following to your configuration:
 
 ```vim
 " For vim-plug
-Plug 'ryoppippi/ray-so.vim'
+Plug 'ryoppippi/vim-ray-so'
 Plug 'vim-denops/denops.vim'
 ```
 ```lua
 -- For lazy.nvim
 {
-    "ryoppippi/ray-so.vim",
+    "ryoppippi/vim-ray-so",
     dependencies = {
         "vim-denops/denops.vim",
     },
