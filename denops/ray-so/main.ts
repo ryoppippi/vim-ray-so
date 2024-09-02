@@ -1,7 +1,7 @@
-import { Denops } from "https://deno.land/x/denops_std@v6.5.0/mod.ts";
-import { g } from "https://deno.land/x/denops_std@v6.5.0/variable/variable.ts";
-import * as helper from "https://deno.land/x/denops_std@v6.5.0/helper/mod.ts";
-import * as fn from "https://deno.land/x/denops_std@v6.5.0/function/mod.ts";
+import { Denops } from "jsr:@denops/std@7.1.1";
+import { g } from "jsr:@denops/std@7.1.1/variable";
+import * as helper from "jsr:@denops/std@7.1.1/helper";
+import * as fn from "jsr:@denops/std@7.1.1/function";
 
 import { systemopen } from "jsr:@lambdalisue/systemopen@1.0.0";
 import * as U from "jsr:@core/unknownutil@3.18.1";
