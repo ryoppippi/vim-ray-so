@@ -1,9 +1,9 @@
 # vim-ray-so
 
-This plugin allows you to easily generate beautiful code images using the [Ray.so](https://ray.so) service directly from your Vim or Neovim editor.
+This plugin allows you to easily generate beautiful code images using the
+[Ray.so](https://ray.so) service directly from your Vim or Neovim editor.
 
 ![screen](./docs/screen.avif)
-
 
 ## Features
 
@@ -21,6 +21,7 @@ Using your preferred plugin manager, add the following to your configuration:
 Plug 'ryoppippi/vim-ray-so'
 Plug 'vim-denops/denops.vim'
 ```
+
 ```lua
 -- For lazy.nvim
 {
@@ -29,10 +30,10 @@ Plug 'vim-denops/denops.vim'
         "vim-denops/denops.vim",
     },
 }
-
 ```
 
-Make sure you have [Deno](https://deno.land/) installed on your system, as this plugin uses Deno for its runtime.
+Make sure you have [Deno](https://deno.land/) installed on your system, as this
+plugin uses Deno for its runtime.
 
 ## Usage
 
@@ -75,6 +76,7 @@ you can see the available options at [`types.ts`](./denops/ray-so/types.ts)
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Related Projects
+
 - [rayso.nvim](https://github.com/TobinPalmer/rayso.nvim)
 - [carbon-now.nvim](https://github.com/ellisonleao/carbon-now.nvim)
 - [vim-carbon-now-sh](https://github.com/kristijanhusak/vim-carbon-now-sh)
